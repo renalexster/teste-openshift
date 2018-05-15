@@ -1,5 +1,3 @@
-FROM php:alpine
+FROM php:7.0-apache
 
-RUN echo "<h1>Meu Dockerfile Alpine</h1>" > /opt/app-root/src/index.php
-
-CMD ["container-entrypoint", "/usr/libexec/s2i/run"]
+RUN echo "<h1>Meu Dockerfile Alpine</h1>" > /var/www/html/index.php
